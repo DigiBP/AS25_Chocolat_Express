@@ -31,11 +31,11 @@
 
 
 # 📦 AS-IS Process
-*  [As-Is BPMN Model – Order to Shipping](As-Is%20Process/order_to_shipping_as-is_23_05.bpmn)
+*  [As-Is BPMN Model – Order to Shipping]()
 
  
 
-![As-Is Process](Pictures/As_is_process.png)
+![As-Is Process]()
 
 **Roles involved in the process**:
 
