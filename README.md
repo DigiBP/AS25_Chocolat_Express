@@ -35,7 +35,7 @@ The vision is to offer persons looking for the right therapy a easy to use platf
 * 
  
 
-![As-Is Process]()
+![As-Is Process](IMAGE BPMN OF CURRENT PROCESS)
 
 **Roles involved in the process**:
 
@@ -80,7 +80,7 @@ Links:
 
 https://digibp.engine.martinlab.science/engine-rest/message
 
-![Post Endpoint](Pictures/Usage_postman.png)
+![Post Endpoint](ENDPOINT EXAMPLE)
 
 # Recap of the integrated Flow
 
@@ -98,7 +98,7 @@ https://digibp.engine.martinlab.science/engine-rest/message
 
 # Decision Table
 
-![Overview Decision Table]()
+![Overview Decision Table](DECISION TABLE IMAGE)
 
 **Current Limitations**
 
@@ -127,6 +127,8 @@ While the current process delivers major improvements in automation, communicati
 - With more generated and available data from clients and therapists, a classification Machine-Learning-Model like Logistic Regression or XGBoost could be exchange the decision-table to predict a matching-score for Top 3   matches. Logistic Regression benefits from smaller datasets, multidimensional features and has a transparency for stakeholders in the process. XGBoost as well.
 
 ![image](IMAGE OF SERVICE TASK)
+
+![link](LINK DEEPNOTE)
 
 
 **Operational Efficiency and Costs**
