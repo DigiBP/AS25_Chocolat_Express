@@ -23,7 +23,7 @@
 
 
 
-# 🧩 Challanges of the Process
+# 🧩 Challenges of the Process
 The overall challenge is to implement a digitized decision-supporting tool and the definition of possible asked dimensions for persons looking for a therapy.
   
 # 🎯 Goal and Vision
