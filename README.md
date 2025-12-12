@@ -117,10 +117,16 @@ In our analysis of the original order-to-shipment process, we identified several
 
 
 # 🔮 Future Steps and Opportunities
-While the current process delivers major improvements in automation, communication, and efficiency, there are several areas where further enhancements can provide even greater value and scalability.
+While the current process delivers major improvements in automation, communication, and efficiency, there are several areas where further enhancements can provide even greater value and scalability:
 
 **Process Enhancements**
-- Optimize
+- Integration for psychotherapists: Possibility to send updated data (Day, Contraints, Vacations) about therapists automatically into the decision table
+- Feedback-Loop for patients and theapists: Possibility to send feedback, if matching process was a) matching persons needs and b) accelerating the search-process to find a therapist
+
+**Future Outlook**
+- With more generated and available data from clients and therapists, a classification Machine-Learning-Model like Logistic Regression or XGBoost could be exchange the decision-table to predict a matching-score for Top 3   matches. Logistic Regression benefits from smaller datasets, multidimensional features and has a transparency for stakeholders in the process. XGBoost as well.
+
+![image](IMAGE OF SERVICE TASK)
 
 
 **Operational Efficiency and Costs**
@@ -130,7 +136,7 @@ While the current process delivers major improvements in automation, communicati
 
 
 # Technologies Used
-To tackle the current challenges of the AS-IS Process the following technologies have been used and applied:
+The following technologies have been used and applied:
 
 | Component               | Purpose                                        |
 |-------------------------|----------------------------------------------|
