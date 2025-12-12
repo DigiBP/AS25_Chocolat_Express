@@ -28,9 +28,8 @@ The overall challenge is to implement a digitized decision-supporting tool and t
   
 # 🎯 Goal and Vision
 The overall goal of the project is to optimize a person-psychtherapist-matching process by implementing a digitized, rule-based
-matching process. Both participants, persons looking for the right therapist and on the other side the therapist should benefit from the matching process.
+matching process. Both participants, persons looking for the right therapist and the therapist should benefit from the matching process by saving time.
 The vision is to offer persons looking for the right therapy a easy to use platform for best matches and confident suggestions by the process.
-In the end, patient and psychotherapist should benefit from a time-saving, digitized process.
 
 # 📦 AS-IS Process
 * 
@@ -48,8 +47,11 @@ In the end, patient and psychotherapist should benefit from a time-saving, digit
   
 ## 📋 Summarized Process Description
 
-| Process Step | Description                        | Comments                                                                                                                                                     | Lane                            |
-|--------------|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| Process Step | Description                        | Comments                                                                            | Lane                            |
+|--------------|------------------------------------|-------------------------------------------------------------------------------------|---------------------------------|
+|      1       | Start: Request                     | Start of the overall process: Request for a matching therapist                      |                                 | 
+|      2       | Form-Filling
+
 
   
 # ✨ TO-BE Process
