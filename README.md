@@ -10,18 +10,18 @@ This project digitalizes and simplifies the process for patients seeking a fitti
 2. [Introduction](#2--introduction)
 3. [Challenges of the Current Process](#3--challenges-of-the-current-process)
 4. [Goal and Vision](#4--goal-and-vision)
-5. [AS-IS Process](#5--as-is-process)
-6. [TO-BE Process](#6--to-be-process)
-7. [Technologies](#7--technologies)
-8. [Integrated Flow](#8--integrated-flow)
-9. [Decision Model & Matching Logic](#9--decision-model--matching-logic)
-   - [Overview](#overview)
-   - [Key Features](#key-features)
-10. [Process Improvements](#10--process-improvements)
-11. [Future Steps and Opportunities](#11--future-steps-and-opportunities)
-12. [Operational Efficiency & Costs](#12--operational-efficiency--costs)
-13. [Technologies Used](#13--technologies-used)
-14. [BPMN Process Overview](#14--bpmn-process-overview)
+5. [Technologies Used](#5--technologies-used)
+6. [AS-IS Process](#6--as-is-process)
+7. [TO-BE Process](#7--to-be-process)
+8. [BPMN Process Overview](#8--bpmn-process-overview)
+9. [Technologies & Modules](#9--technologies--modules)
+10. [Integrated Flow](#10--integrated-flow)
+11. [Decision Model & Matching Logic](#11--decision-model--matching-logic)
+    - [Overview](#overview)
+    - [Key Features](#key-features)
+12. [Process Improvements](#12--process-improvements)
+13. [Operational Efficiency & Costs](#13--operational-efficiency--costs)
+14. [Future Steps and Opportunities](#14--future-steps-and-opportunities)
 
 ---
 
@@ -75,13 +75,28 @@ To provide patients with an easy-to-use platform delivering confident and transp
 
 ---
 
-## 5. 📦 AS-IS Process
+## 5. 🧑‍💻 Technologies Used
+
+| Component    | Purpose                              |
+| ------------ | ------------------------------------ |
+| Camunda 7    | Business process orchestration       |
+| BPMN 2.0     | Process modeling language            |
+| DMN 1.3      | Decision modeling notation           |
+| Google Forms | Patient data intake                  |
+| Deepnote     | API integration & ML experimentation |
+| Flask        | REST API server                      |
+| Python       | Backend processing & ML model        |
+| scikit-learn | Machine learning (Logistic Regression) |
+
+---
+
+## 6. 📦 AS-IS Process
 
 ### Description
 
 The current (AS-IS) process is largely manual and fragmented. Patients typically contact multiple therapists individually, often without knowing availability or specialization fit in advance.
 
-![As-Is Process](Appendix_README/AS-IS-Process.png)
+![As-Is Process](IMAGE_BPMN_OF_CURRENT_PROCESS)
 
 ### Roles Involved
 
@@ -106,7 +121,7 @@ The current (AS-IS) process is largely manual and fragmented. Patients typically
 
 ---
 
-## 6. ✨ TO-BE Process
+## 7. ✨ TO-BE Process
 
 The TO-BE process introduces automation and structured decision logic while maintaining transparency and control for all parties.
 
@@ -118,11 +133,34 @@ The TO-BE process introduces automation and structured decision logic while main
 - Clear acceptance/decline workflow for therapists
 - Reduced administrative workload
 
-![To-Be Process](Appendix_README/TO_BE_PROCESS.png)
+![To-Be Process](https://github.com/DANIEL-FHNW/AS25_Chocolat_Express/blob/main/AS_IS_PROCESS.png)
 
 ---
 
-## 7. 🧾 Technologies
+## 8. 📌 BPMN Process Overview
+
+The BPMN model includes:
+
+- **Start Event**: Patient Request
+- **User Tasks**: Form Input, Patient Confirmation, Therapist Decision
+- **Business Rule Tasks**: Decision Tables (DMN)
+- **Service Tasks**: API Communication with Deepnote
+- **Gateways**: Decision points for confirmation/rejection
+- **End Events**: Match confirmed or Re-run matching
+
+### Process Flow
+
+1. Patient submits preferences via form
+2. Data is validated and preprocessed
+3. Decision tables evaluate matching criteria
+4. System suggests best-matching therapist
+5. Patient confirms or declines suggestion
+6. Therapist accepts or rejects request
+7. Process ends with confirmation or loops back for new match
+
+---
+
+## 9. 🧾 Technologies & Modules
 
 ### Modules Used
 
@@ -142,12 +180,12 @@ The TO-BE process introduces automation and structured decision logic while main
 
 **Deepnote Notebooks**
 
-- [API Server Notebook](https://deepnote.com/workspace/DHP25-244a274b-59d3-442f-b7ef-3d5d24503cee/project/chocolatexpress-fbdcce36-fd51-4cfb-8676-e6e544158098/notebook/APIServer-cc5e3854092d45b89dd08990f5fce491?secondary-sidebar-autoopen=true&secondary-sidebar=agent)
-- [ML Matcher Notebook](https://deepnote.com/workspace/DHP25-244a274b-59d3-442f-b7ef-3d5d24503cee/project/chocolatexpress-fbdcce36-fd51-4cfb-8676-e6e544158098/notebook/Logistic-Classification-Machine-Learning-Matcher-738d2ebcd5ce4bdba232b837d817c7f9?secondary-sidebar-autoopen=true&secondary-sidebar=agent)
+- [API Server Notebook](https://deepnote.com/workspace/DHP25-244a274b-59d3-442f-b7ef-3d5d24503cee/project/chocolatexpress-fbdcce36-fd51-4cfb-8676-e6e544158098/notebook/APIServer-cc5e3854092d45b89dd08990f5fce491?secondary-sidebar-autoopen=true&secondary-sidebar=agent) - Flask REST API for appointment scheduling
+- [ML Matcher Notebook](https://deepnote.com/workspace/DHP25-244a274b-59d3-442f-b7ef-3d5d24503cee/project/chocolatexpress-fbdcce36-fd51-4cfb-8676-e6e544158098/notebook/Logistic-Classification-Machine-Learning-Matcher-738d2ebcd5ce4bdba232b837d817c7f9?secondary-sidebar-autoopen=true&secondary-sidebar=agent) - ML-based external service task worker
 
 ---
 
-## 8. 🔁 Integrated Flow
+## 10. 🔁 Integrated Flow
 
 1. A person searches for a suitable therapist
 2. The person either calls a service number or fills out a digital form
@@ -162,7 +200,7 @@ The TO-BE process introduces automation and structured decision logic while main
 
 ---
 
-## 9. 🧮 Decision Model & Matching Logic
+## 11. 🧮 Decision Model & Matching Logic
 
 The matching system uses a multi-layered decision model that normalizes patient preferences and therapist attributes into discrete categories, enabling deterministic and transparent matching logic.
 
@@ -188,7 +226,7 @@ For detailed information about the decision model, matching logic, input/output 
 
 ---
 
-## 10. 🚀 Process Improvements
+## 12. 🚀 Process Improvements
 
 | Challenge                | Solution                              |
 | ------------------------ | ------------------------------------- |
@@ -201,7 +239,16 @@ The improved process significantly reduces delays, errors, and manual workload w
 
 ---
 
-## 11. 🔮 Future Steps and Opportunities
+## 13. ⚙️ Operational Efficiency & Costs
+
+- Reduced administrative effort
+- Faster patient placement
+- Better utilization of therapist capacity
+- Scalable integration with existing IT infrastructures
+
+---
+
+## 14. 🔮 Future Steps and Opportunities
 
 ### Process Enhancements
 
@@ -218,39 +265,8 @@ With increasing data availability, the rule-based decision table could be replac
 
 The system could generate a **Top-3 matching score** instead of a single result.
 
-![To-Be Process](deepnote/Future_Machine_Learning.png)
-
 ---
 
-## 12. ⚙️ Operational Efficiency & Costs
+**Project Status:** Prototype / Academic Project
 
-- Reduced administrative effort
-- Faster patient placement
-- Better utilization of therapist capacity
-- Scalable integration with existing IT infrastructures
-
----
-
-## 13. 🧑‍💻 Technologies Used
-
-| Component    | Purpose                              |
-| ------------ | ------------------------------------ |
-| Camunda 7    | Business process orchestration       |
-| BPMN 2.0     | Process modeling language            |
-| Google Forms | Patient data intake                  |
-| Deepnote     | API integration & ML experimentation |
-
----
-
-## 14. 📌 BPMN Process Overview
-
-The BPMN model includes:
-
-- Start Event (Patient Request)
-- User Tasks (Form Input)
-- Business Rule Tasks (Decision Tables)
-- Service Tasks (API Communication)
-- User Tasks (Therapist Decision)
-- End Events (Match or Re-run)
-
----
+**Context:** Digital Business Processes & Medical Informatics
