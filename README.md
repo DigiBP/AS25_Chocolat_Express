@@ -225,7 +225,7 @@ The matching system uses a multi-layered decision model that normalizes patient 
 For detailed information about the decision model, matching logic, input/output variables, and decision layers, see:
 
 📄 **[Decision Table Documentation](Appendix_README/Decision%20Table.md)**
-[Camunda Decision Table](Appendix_README/Decision%20Table.dmn)
+📄 **[Camunda Decision Table](Appendix_README/Decision%20Table.dmn)**
 
 ---
 
