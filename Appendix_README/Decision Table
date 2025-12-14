@@ -1,1 +1,121 @@
+## 🧠 Therapist Matching Logic (DMN-based)
+
+This project implements a **deterministic therapist–patient matching system** using **Camunda DMN decision tables**.  
+All inputs are normalized and encoded into discrete variables, enabling transparent, explainable, and decision logic.
+
+---
+
+## 1. Normalization & Encoding
+
+All raw inputs are mapped to **canonical integer values** via atomic DMN decisions.
+
+### Therapy Setting
+- `therapy_setting` → `nbr_of_clients`
+  - individual → `1`
+  - couple → `2`
+
+### Disease Category
+- `disease_category` → `category`
+  - Encoded as integer values `1–4`
+
+### Gender
+- `gender` → `genderDecision`
+  - female → `1`
+  - male → `2`
+  - non-binary → `3`
+
+### Waiting Time Tolerance
+- `waiting_time` → `waitingTimeDecision`
+  - very short / immediate → `2`
+  - short → `1`
+  - neutral → `0`
+  - long tolerated → `-1`
+
+Each normalization step is implemented as a **standalone DMN decision table** with a single output.
+
+---
+
+## 2. Availability Scoring
+
+Availability preferences are evaluated in multiple steps and then aggregated into a single score.
+
+### Weekday Preference
+- **Decision:** `Decision_Weekday`
+- Normalizes preferred weekdays into a generic score: `day`
+
+### Daytime Preference
+- **Decision:** `Decision_Daytime`
+- Normalizes time-of-day preferences into: `daytimeDecision`
+
+### Waiting Time Flexibility
+- **Decision:** `Decision_WaitingTime`
+- Evaluates tolerance for delayed appointments
+
+### Combined Availability
+- **Decision:** `Decision_0i5oonf` *(Availability)*
+- Combines:
+  - `day`
+  - `daytimeDecision`
+  - `waitingTimeDecision`
+
+**Output:** `availability_score`
+
+| Score | Meaning |
+|------:|--------|
+| `3` | Best availability match |
+| `2` | Good availability match |
+| `1` | Lowest configured positive match |
+
+---
+
+## 3. Therapist Selection (Main Decision)
+
+### Decision: `Decision_TherapistMatches`
+
+This is the **final decision table** responsible for selecting a therapist.
+
+#### Inputs
+- `nbr_of_clients`
+- `category`
+- `genderDecision`
+- `availability_score`
+
+#### Logic
+- Each rule corresponds to **one therapist**
+- Rules define allowed combinations of:
+  - therapy setting
+  - disease category
+  - gender compatibility
+  - availability score
+- Matching follows a deterministic rule-based approach
+
+#### Output
+- `Therapy_ID` (therapist identifier or name)
+
+#### Example Therapists
+- Dr. Jordan
+- Dr. Müller
+- Dr. Ruth
+- Dr. Goth
+- Dr. Biesel
+- Dr. Jung
+
+If an input combination matches a rule’s conditions, the corresponding `Therapy_ID` is returned.
+
+---
+
+## 4. Design Principles
+
+- ✅ Fully deterministic (no ML or probabilistic behavior)
+- ✅ Explainable and auditable decisions
+- ✅ Modular DMN design (one responsibility per decision)
+- ✅ Easy to extend with new therapists or scoring rules
+
+---
+
+## 5. Camunda Integration
+
+- Implemented as a **DMN Decision Requirements Diagram (DRD)**
+- Designed to be invoked from BPMN service tasks or external workers
+- Compatible with Camunda Cockpit inspection and history tracking
 
