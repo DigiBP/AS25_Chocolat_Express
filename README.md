@@ -133,7 +133,7 @@ The TO-BE process introduces automation and structured decision logic while main
 - Clear acceptance/decline workflow for therapists
 - Reduced administrative workload
 
-![To-Be Process](https://github.com/DANIEL-FHNW/AS25_Chocolat_Express/blob/main/AS_IS_PROCESS.png)
+![To-Be Process](Appendix_README/TO_BE_PROCESS.png)
 
 ---
 
@@ -265,6 +265,6 @@ With increasing data availability, the rule-based decision table could be replac
 
 The system could generate a **Top-3 matching score** instead of a single result.
 
-[Logistic Regression Documentation](deepnote/Logistic Regression Matcher.md)
+![Logistic Regression Documentation](deepnote/Logistic Regression Matcher.md)
 
 
