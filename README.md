@@ -135,6 +135,8 @@ The TO-BE process introduces automation and structured decision logic while main
 
 ![To-Be Process](Appendix_README/TO_BE_PROCESS.png)
 
+[Camunda BPMN](Appendix_README/TO_BE_PROCESS.bpmn)
+
 ---
 
 ## 8. 📌 BPMN Process Overview
