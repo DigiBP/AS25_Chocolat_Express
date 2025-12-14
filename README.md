@@ -218,6 +218,8 @@ With increasing data availability, the rule-based decision table could be replac
 
 The system could generate a **Top-3 matching score** instead of a single result.
 
+![To-Be Process](deepnote/Future_Machine_Learning.png)
+
 ---
 
 ## 12. ⚙️ Operational Efficiency & Costs
@@ -252,7 +254,3 @@ The BPMN model includes:
 - End Events (Match or Re-run)
 
 ---
-
-**Project Status:** Prototype / Academic Project
-
-**Context:** Digital Business Processes & Medical Informatics
