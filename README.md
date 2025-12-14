@@ -118,7 +118,7 @@ The TO-BE process introduces automation and structured decision logic while main
 - Clear acceptance/decline workflow for therapists
 - Reduced administrative workload
 
-![To-Be Process](https://github.com/DANIEL-FHNW/AS25_Chocolat_Express/blob/main/AS_IS_PROCESS.png)
+![To-Be Process](Appendix_README/TO_BE_PROCESS.png)
 
 ---
 
