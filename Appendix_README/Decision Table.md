@@ -126,21 +126,6 @@ The DRD decomposes matching into smaller, focused decisions, each producing inte
 
 ---
 
-### Final Decision Table (DMN)
-
-**Decision Name:** `Select_Therapist`
-
-**Inputs:**
-
-- therapy_type
-- modality
-
-**Output:**
-
-- `Therapy_ID` (therapist_id)
-
----
-
 ### Hit Policy Selection
 
 **Chosen Hit Policy: `COLLECT (MAX)`**
