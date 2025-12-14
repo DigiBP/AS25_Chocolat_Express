@@ -1,3 +1,5 @@
+## Decision Table Documentation
+
 ### Input Variables
 
 All patient- and therapist-related variables are normalized and mapped into discrete categories to enable deterministic decision logic.
