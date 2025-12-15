@@ -261,6 +261,8 @@ matching results directly in the notebook terminal.
 
 ![Logistic Regression Process Example](Appendix_README/ML-Process.png)
 
+The example of the possible process-step is deployed in the tenant-id `mi25chocolat`.
+
 [Logistic Regression Documentation](deepnote/Logistic%20Regression%20Matcher.md)
 
 
