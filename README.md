@@ -14,8 +14,8 @@ This project digitalizes and simplifies the process for patients seeking a fitti
 6. [AS-IS Process](#6--as-is-process)
 7. [TO-BE Process](#7--to-be-process)
 8. [BPMN Process Overview](#8--bpmn-process-overview)
-9. [Technologies & Modules](#9--technologies--modules)
-10. [Integrated Flow](#10--integrated-flow)
+9. [Videos of the Process](#9--videos-of-the-process)
+10. [Technologies & Modules](#9--technologies--modules)
 11. [Decision Model & Matching Logic](#11--decision-model--matching-logic)
     - [Overview](#overview)
     - [Key Features](#key-features)
@@ -162,7 +162,11 @@ The BPMN model includes:
 
 ---
 
-## 9. 🧾 Technologies & Modules
+## 9. 🧾 Videos of the process
+
+
+
+## 10. 🧾 Technologies & Modules
 
 ### Modules Used
 
@@ -184,21 +188,6 @@ The BPMN model includes:
 
 - [API Server Notebook](https://deepnote.com/workspace/DHP25-244a274b-59d3-442f-b7ef-3d5d24503cee/project/chocolatexpress-fbdcce36-fd51-4cfb-8676-e6e544158098/notebook/APIServer-cc5e3854092d45b89dd08990f5fce491?secondary-sidebar-autoopen=true&secondary-sidebar=agent) - Flask REST API for appointment scheduling
 - [ML Matcher Notebook](https://deepnote.com/workspace/DHP25-244a274b-59d3-442f-b7ef-3d5d24503cee/project/chocolatexpress-fbdcce36-fd51-4cfb-8676-e6e544158098/notebook/Logistic-Classification-Machine-Learning-Matcher-738d2ebcd5ce4bdba232b837d817c7f9?secondary-sidebar-autoopen=true&secondary-sidebar=agent) - ML-based external service task worker
-
----
-
-## 10. 🔁 Integrated Flow
-
-1. A person searches for a suitable therapist
-2. The person either calls a service number or fills out a digital form
-3. Form variables are sent to a preprocessing decision table
-   - Variables are mapped to integer-based categories
-   - Each category contributes to the final matching logic
-4. A decision table determines a matching `therapist_id`
-5. The matching result is returned via API
-6. The patient confirms or declines the suggestion
-7. The therapist is informed and can accept or reject the request
-8. The process ends with confirmation or re-matching
 
 ---
 
