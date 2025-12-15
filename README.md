@@ -25,9 +25,9 @@ This project digitalizes and simplifies the process for patients seeking a fitti
 
 ---
 
-## 1. 👥 Team Chocolat-Express – Psychotherapist Matching Process
+## 1. Team Chocolat-Express – Psychotherapist Matching Process
 
-### 🧑‍🔧 Team Members
+### Team Members
 
 | Name            | Email                                                                       |
 | --------------- | --------------------------------------------------------------------------- |
@@ -35,7 +35,7 @@ This project digitalizes and simplifies the process for patients seeking a fitti
 | Christine Remy  | [christine.remya@students.fhnw.ch](mailto:christine.remya@students.fhnw.ch) |
 | Daniel Fuhst    | [daniel.fuhst@students.fhnw.ch](mailto:daniel.fuhst@students.fhnw.ch)       |
 
-### 💡 Coaches
+### Coaches
 
 - Andreas Martin
 - Charuta Pande
@@ -43,7 +43,7 @@ This project digitalizes and simplifies the process for patients seeking a fitti
 
 ---
 
-## 2. 📝 Introduction
+## 2. Introduction
 
 Finding an available and suitable psychotherapist is often a long and frustrating process for patients. Current workflows rely heavily on manual coordination, phone calls, and fragmented information across institutions and practitioners. This project addresses these issues by introducing a **digitized, rule-based matching process** that supports decision-making while keeping human oversight in place.
 
@@ -51,7 +51,7 @@ The system focuses on **efficiency, transparency, and fairness**, ensuring that 
 
 ---
 
-## 3. 🧩 Challenges of the Current Process
+## 3. Challenges of the Current Process
 
 - High administrative burden for patients and providers
 - Manual and repetitive data handling
@@ -63,7 +63,7 @@ The main challenge was to define **relevant matching dimensions** (medical, logi
 
 ---
 
-## 4. 🎯 Goal and Vision
+## 4. Goal and Vision
 
 **Goal**
 
@@ -75,22 +75,21 @@ To provide patients with an easy-to-use platform delivering confident and transp
 
 ---
 
-## 5. 🧑‍💻 Technologies Used
+## 5. Technologies Used
 
 | Component    | Purpose                              |
 | ------------ | ------------------------------------ |
 | Camunda 7    | Business process orchestration       |
 | BPMN 2.0     | Process modeling language            |
 | DMN 1.3      | Decision modeling notation           |
-| Google Forms | Patient data intake                  |
 | Deepnote     | API integration & ML experimentation |
 | Flask        | REST API server                      |
 | Python       | Backend processing & ML model        |
-| scikit-learn | Machine learning (Logistic Regression) |
+| scikit-learn | Machine learning (Logistic Regression)|
 
 ---
 
-## 6. 📦 AS-IS Process
+## 6. AS-IS Process
 
 ### Description
 
