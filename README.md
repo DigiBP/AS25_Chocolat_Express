@@ -8,20 +8,19 @@ This project digitalizes and simplifies the process for patients seeking a fitti
 
 1. [Team Chocolat-Express](#1--team-chocolat-express--psychotherapist-matching-process)
 2. [Introduction](#2--introduction)
-3. [Challenges of the Current Process](#3--challenges-of-the-current-process)
-4. [Goal and Vision](#4--goal-and-vision)
-5. [Technologies Used](#5--technologies-used)
-6. [AS-IS Process](#6--as-is-process)
-7. [TO-BE Process](#7--to-be-process)
-8. [BPMN Process Overview](#8--bpmn-process-overview)
-9. [Videos of the Process](#9--videos-of-the-process)
-10. [Technologies & Modules](#9--technologies--modules)
-11. [Decision Model & Matching Logic](#11--decision-model--matching-logic)
+3. [Goal and Vision](#4--goal-and-vision)
+4. [Technologies Used](#5--technologies-used)
+5. [AS-IS Process](#6--as-is-process)
+6. [TO-BE Process](#7--to-be-process)
+7. [BPMN Process Overview](#8--bpmn-process-overview)
+8. [Videos of the Process](#9--videos-of-the-process)
+9. [Technologies & Modules](#9--technologies--modules)
+10. [Decision Model & Matching Logic](#11--decision-model--matching-logic)
     - [Overview](#overview)
     - [Key Features](#key-features)
-12. [Process Improvements](#12--process-improvements)
-13. [Operational Efficiency & Costs](#13--operational-efficiency--costs)
-14. [Future Steps and Opportunities](#14--future-steps-and-opportunities)
+11. [Process Improvements](#12--process-improvements)
+12. [Operational Efficiency & Costs](#13--operational-efficiency--costs)
+13. [Future Steps and Opportunities](#14--future-steps-and-opportunities)
 
 ---
 
@@ -51,19 +50,7 @@ The system focuses on **efficiency, transparency, and fairness**, ensuring that 
 
 ---
 
-## 3. Challenges of the Current Process
-
-- High administrative burden for patients and providers
-- Manual and repetitive data handling
-- Limited transparency regarding therapist availability
-- Long waiting times and inefficient follow-ups
-- No standardized decision logic for matching
-
-The main challenge was to define **relevant matching dimensions** (medical, logistical, and personal preferences) and implement them in a structured, automated decision-support tool.
-
----
-
-## 4. Goal and Vision
+## 3. Goal and Vision
 
 **Goal**
 
@@ -75,7 +62,7 @@ To provide patients with an easy-to-use platform delivering confident and transp
 
 ---
 
-## 5. Technologies Used
+## 4. Technologies Used
 
 | Component    | Purpose                              |
 | ------------ | ------------------------------------ |
@@ -89,11 +76,21 @@ To provide patients with an easy-to-use platform delivering confident and transp
 
 ---
 
-## 6. AS-IS Process
+## 5. AS-IS Process
 
 ### Description
 
 The current (AS-IS) process is largely manual and fragmented. Patients typically contact multiple therapists individually, often without knowing availability or specialization fit in advance.
+
+Detailed Challenges of the Current Process:
+
+- High administrative burden for patients and providers
+- Manual and repetitive data handling
+- Limited transparency regarding therapist availability
+- Long waiting times and inefficient follow-ups
+- No standardized decision logic for matching
+
+The main challenge was to define **relevant matching dimensions** (medical, logistical, and personal preferences) and implement them in a structured, automated decision-support tool.
 
 ![As-Is Process](Appendix_README/AS-IS-Process.png)
 
@@ -109,7 +106,7 @@ The current (AS-IS) process is largely manual and fragmented. Patients typically
 - Patients seeking therapy
 - Licensed psychotherapists
 
-### 📋 Summarized AS-IS Process
+### Summarized AS-IS Process
 
 | Step | Description               | Comments                                    | Lane    |
 | ---- | ------------------------- | ------------------------------------------- | ------- |
@@ -120,7 +117,7 @@ The current (AS-IS) process is largely manual and fragmented. Patients typically
 
 ---
 
-## 7. ✨ TO-BE Process
+## 6. TO-BE Process
 
 The TO-BE process introduces automation and structured decision logic while maintaining transparency and control for all parties.
 
@@ -138,7 +135,7 @@ The TO-BE process introduces automation and structured decision logic while main
 
 ---
 
-## 8. 📌 BPMN Process Overview
+## 7. BPMN Process Overview
 
 The BPMN model includes:
 
@@ -161,13 +158,15 @@ The BPMN model includes:
 
 ---
 
-## 9. 🧾 Videos of the process
+## 8. Videos of the process
 
 [Match-Recording](videos/match-recording.mp4)
 
 [No-Match-Recording](videos/no-match-recording.mp4)
 
-## 10. 🧾 Technologies & Modules
+---
+
+## 9. Technologies & Modules
 
 ### Modules Used
 
@@ -192,7 +191,7 @@ The BPMN model includes:
 
 ---
 
-## 11. 🧮 Decision Model & Matching Logic
+## 10. Decision Model & Matching Logic
 
 The matching system uses a multi-layered decision model that normalizes patient preferences and therapist attributes into discrete categories, enabling deterministic and transparent matching logic.
 
@@ -219,7 +218,7 @@ For detailed information about the decision model, matching logic, input/output 
 
 ---
 
-## 12. 🚀 Process Improvements
+## 11. Process Improvements
 
 | Challenge                | Solution                              |
 | ------------------------ | ------------------------------------- |
@@ -232,7 +231,7 @@ The improved process significantly reduces delays, errors, and manual workload w
 
 ---
 
-## 13. ⚙️ Operational Efficiency & Costs
+## 12. Operational Efficiency & Costs
 
 - Reduced administrative effort
 - Faster patient placement
@@ -241,7 +240,7 @@ The improved process significantly reduces delays, errors, and manual workload w
 
 ---
 
-## 14. 🔮 Future Steps and Opportunities
+## 13. Future Steps and Opportunities
 
 ### Process Enhancements
 
