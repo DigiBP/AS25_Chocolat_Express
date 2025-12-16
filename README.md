@@ -46,7 +46,7 @@ This project digitalizes and simplifies the process for patients seeking a fitti
 
 Finding an available and suitable psychotherapist is often a long and frustrating process for patients. Current workflows rely heavily on manual coordination, phone calls, and fragmented information across institutions and practitioners. This project addresses these issues by introducing a **digitized, rule-based matching process** that supports decision-making while keeping human oversight in place.
 
-The system focuses on **efficiency, transparency, and fairness**, ensuring that patients receive suitable therapist suggestions while therapists retain control over their capacity and case acceptance.
+The system focuses on **efficiency, transparency, and fairness**, ensuring that patients receive suitable therapist suggestions while therapists retain control over their capacity and case acceptance. With this we ultimately aim for earlier clinical interventions for patients with mental health diseases. But this system and the respective workflow can also be expanded to other clinical indications such as e.g specialized orthopedic surgeons.
 
 ---
 
@@ -64,14 +64,14 @@ To provide patients with an easy-to-use platform delivering confident and transp
 
 ## 4. Technologies Used
 
-| Component    | Purpose                              |
-| ------------ | ------------------------------------ |
-| Camunda 7    | Business process orchestration       |
-| BPMN 2.0     | Process modeling language            |
-| DMN 1.3      | Decision modeling notation           |
-| Deepnote     | API integration & ML experimentation |
-| Flask        | REST API server                      |
-| Python       | Backend processing & ML model        |
+| Component    | Purpose                               |
+| ------------ | ------------------------------------  |
+| Camunda 7    | Business process orchestration        |
+| BPMN 2.0     | Process modeling language             |
+| DMN 1.3      | Decision modeling notation            |
+| Deepnote     | API integration & ML experimentation  |
+| Flask        | REST API server                       |
+| Python       | Backend processing & ML model         |
 | scikit-learn | Machine learning (Logistic Regression)|
 
 ---
@@ -90,7 +90,7 @@ Detailed Challenges of the Current Process:
 - Long waiting times and inefficient follow-ups
 - No standardized decision logic for matching
 
-The main challenge was to define **relevant matching dimensions** (medical, logistical, and personal preferences) and implement them in a structured, automated decision-support tool.
+Our initial step was to define **relevant matching dimensions** (medical, logistical, and personal preferences) and implement them in a structured, automated decision-support tool. In the real world setting the matching dimensions are not clearly defined across therapists adding to the patients search burden. 
 
 ![As-Is Process](Appendix_README/AS-IS-Process.png)
 
