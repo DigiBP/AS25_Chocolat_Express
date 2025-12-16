@@ -14,7 +14,7 @@ This project digitalizes and simplifies the process for patients seeking a fitti
 6. [TO-BE Process](#7--to-be-process)
 7. [BPMN Process Overview](#8--bpmn-process-overview)
 8. [Videos of the Process](#9--videos-of-the-process)
-9. [Technologies & Modules](#9--technologies--modules)
+9. [Technologies & Modules](#10--technologies--modules)
 10. [Decision Model & Matching Logic](#11--decision-model--matching-logic)
     - [Overview](#overview)
     - [Key Features](#key-features)
