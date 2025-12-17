@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="DRD_V6" name="Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.39.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.23.0">
+  <description></description>
+  <decision id="Decision_TherapistMatches" name="Which Therapy-Match" camunda:historyTimeToLive="">
+    <question></question>
+    <allowedAnswers></allowedAnswers>
+    <informationRequirement id="InformationRequirement_0v4l577">
+      <requiredDecision href="#Decision_TherapySetting" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_1xhvoxg">
+      <requiredDecision href="#Decision_DiseaseCategory" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0knlt3k">
+      <requiredDecision href="#Decision_Weekday" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0osmmfg">
+      <requiredDecision href="#Decision_Daytime" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_1ijx6o9">
+      <requiredDecision href="#Decision_Gender" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0xtou9z">
+      <requiredDecision href="#Decision_WaitingTime" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0bnds7l" hitPolicy="COLLECT">
+      <input id="InputClause_1go5yi9" label="nbr_of_clients">
+        <inputExpression id="LiteralExpression_0xdbssd" typeRef="integer" expressionLanguage="feel">
+          <text>nbr_of_clients</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1ovtpbs" label="category">
+        <inputExpression id="LiteralExpression_0zis2xm" typeRef="integer">
+          <text>category</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_09tue12" label="day">
+        <inputExpression id="LiteralExpression_03f07wd" typeRef="integer">
+          <text>day</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0jl14nz" label="genderDecision">
+        <inputExpression id="LiteralExpression_13nteyl" typeRef="integer">
+          <text>genderDecision</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0fyh4zt" label="Therapy_ID" name="Therapy_ID" typeRef="string" />
+      <rule id="DecisionRule_0xmso8c">
+        <description>TEST</description>
+        <inputEntry id="UnaryTests_0506j0x">
+          <text>[1]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09ieyn3">
+          <text>[1..2]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g8l9uq">
+          <text>[1,3,5]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ywgbt7">
+          <text>[1]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ngi8cq">
+          <text>"Dr. Jordan"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p7ry03">
+        <inputEntry id="UnaryTests_0oh7z5a">
+          <text>[2]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y3j7t4">
+          <text>[4]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gfls8s">
+          <text>[4,5]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_179ttay">
+          <text>[3]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12yrh1b">
+          <text>"Dr. Müller"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18ttzn1">
+        <inputEntry id="UnaryTests_1b7g6gr">
+          <text>[1]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19xnjcb">
+          <text>[1,2,3,4]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10iog0m">
+          <text>[1,2]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1txua8d">
+          <text>[2]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nr7yy8">
+          <text>"Dr. Ruth"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1368nvv">
+        <inputEntry id="UnaryTests_11zs1j8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x62k6b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01gkjhc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w53692">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_004cmcw">
+          <text>"Dr. Smith"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lslfh7">
+        <inputEntry id="UnaryTests_1pfvfpd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tjwwyj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14sze7x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_049onxt">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1d6exwl">
+          <text>"Dr. John"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="therapy_setting" name="Therapy Setting">
+    <description></description>
+  </inputData>
+  <inputData id="disease_category" name="Disease Category" />
+  <inputData id="weekday" name="weekday" />
+  <inputData id="daytime" name="Daytime" />
+  <inputData id="gender" name="Gender" />
+  <inputData id="waiting_time" name="Waiting Time" />
+  <decision id="Decision_TherapySetting" name="Individual or Couple">
+    <informationRequirement id="InformationRequirement_09iy0dn">
+      <requiredInput href="#therapy_setting" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0xkjmc9">
+      <input id="InputClause_13dlqr3" label="therapy_setting">
+        <inputExpression id="LiteralExpression_1l9knft" typeRef="string" expressionLanguage="feel">
+          <text>therapy_setting</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_14jf0q8">
+          <text>"individual","couple"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_0s9adyl" label="nbr_of_clients" name="nbr_of_clients" typeRef="integer" />
+      <rule id="DecisionRule_0rixf7i">
+        <inputEntry id="UnaryTests_1kb4i89">
+          <text>"individual"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05wz50z">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0opiwrs">
+        <inputEntry id="UnaryTests_1ry9rkw">
+          <text>"couple"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ay33lj">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_DiseaseCategory" name="Kind of Therapy">
+    <informationRequirement id="InformationRequirement_0w8ipof">
+      <requiredInput href="#disease_category" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0hzcvwv">
+      <input id="InputClause_0n754se" label="disease_category">
+        <inputExpression id="LiteralExpression_0wo0osk" typeRef="string" expressionLanguage="feel">
+          <text>disease_category</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1fsw0g7">
+          <text>"depression","anxiety","coupletherapy","addiction"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_02woa16" label="category" name="category" typeRef="integer" />
+      <rule id="DecisionRule_0515byv">
+        <inputEntry id="UnaryTests_1xt9u4s">
+          <text>"depression"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1icsbaf">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vo2dcu">
+        <inputEntry id="UnaryTests_07974ft">
+          <text>"anxiety"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11do6p0">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13jvmfo">
+        <inputEntry id="UnaryTests_1qq90pa">
+          <text>"coupletherapy"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gblfjv">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1s3uxw5">
+        <inputEntry id="UnaryTests_05hzm4x">
+          <text>"addiction"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lqpv0x">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_Weekday" name="Day">
+    <informationRequirement id="InformationRequirement_135sk1w">
+      <requiredInput href="#weekday" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1rj3pvs">
+      <input id="InputClause_15s648z" label="weekday">
+        <inputExpression id="LiteralExpression_0azaug6" typeRef="string">
+          <text>weekday</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1kwkb7u" label="day" name="day" typeRef="integer" />
+      <rule id="DecisionRule_0vx7m99">
+        <inputEntry id="UnaryTests_0ffsczo">
+          <text>"monday"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0u2a29d">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00fpp5z">
+        <inputEntry id="UnaryTests_0pzzyht">
+          <text>"tuesday"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xg3ptm">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0baf9ec">
+        <inputEntry id="UnaryTests_0p91i8u">
+          <text>"wednesday"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1l2r59c">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ka6rzl">
+        <inputEntry id="UnaryTests_0v7mxg1">
+          <text>"thursday"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xyv1a1">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0leywz0">
+        <inputEntry id="UnaryTests_15pi484">
+          <text>"friday"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1sdvt3q">
+          <text>5</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_Daytime" name="Daytime">
+    <informationRequirement id="InformationRequirement_11rqmyi">
+      <requiredInput href="#daytime" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0032jcc">
+      <input id="InputClause_048u04u" label="daytime">
+        <inputExpression id="LiteralExpression_1yaud2o" typeRef="string">
+          <text>daytime</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_15p5erm">
+          <text>"morning","afternoon"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_0fzaayp" label="daytimeDecision" name="daytimeDecision" typeRef="integer" />
+      <rule id="DecisionRule_02femvl">
+        <inputEntry id="UnaryTests_1whbise">
+          <text>"morning"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12w0f2k">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0iz16fk">
+        <inputEntry id="UnaryTests_0vq36r5">
+          <text>"afternoon"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00yajag">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_Gender" name="Gender Therapist">
+    <informationRequirement id="InformationRequirement_1mgygnu">
+      <requiredInput href="#gender" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1asg3tk">
+      <input id="InputClause_0wiji7d" label="gender" biodi:width="192">
+        <inputExpression id="LiteralExpression_1dl6rih" typeRef="string">
+          <text>gender</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_11qbg3y">
+          <text>"female","male","non-binary"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_0u0v331" label="genderDecision" name="genderDecision" typeRef="integer" biodi:width="192" />
+      <rule id="DecisionRule_0m3xo6n">
+        <inputEntry id="UnaryTests_05u64sl">
+          <text>"female"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16ttm2o">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hjfinc">
+        <inputEntry id="UnaryTests_05dn4lf">
+          <text>"male"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ev4typ">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bvtn2m">
+        <inputEntry id="UnaryTests_08y4alr">
+          <text>"non_binary"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i7z8l0">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_WaitingTime" name="Waiting List">
+    <informationRequirement id="InformationRequirement_0cpzfb1">
+      <requiredInput href="#waiting_time" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_17bzwua">
+      <input id="InputClause_11yu2eq" label="waiting_time">
+        <inputExpression id="LiteralExpression_0l9wl2r" typeRef="string" expressionLanguage="feel">
+          <text>waiting_time</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_19qnbg1">
+          <text>"1_week","2_weeks","3_weeks","4_weeks"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_16j7756" label="waitingTimeDecision" name="waitingTimeDecision" typeRef="integer" />
+      <rule id="DecisionRule_0pkireq">
+        <inputEntry id="UnaryTests_1r85fhp">
+          <text>"1_week"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16e3dfs">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0x6kv9g">
+        <inputEntry id="UnaryTests_0931zkf">
+          <text>"2_weeks"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zqfjgp">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wy2skw">
+        <inputEntry id="UnaryTests_0lincl6">
+          <text>"3_weeks"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nds2mp">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1y4uxu8">
+        <inputEntry id="UnaryTests_1s3b8k8">
+          <text>"4_weeks"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18635fo">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_TherapistMatches">
+        <dc:Bounds height="80" width="180" x="652" y="420" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1ip0dbz" dmnElementRef="therapy_setting">
+        <dc:Bounds height="45" width="125" x="127" y="127" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_15puee0" dmnElementRef="InformationRequirement_09iy0dn">
+        <di:waypoint x="252" y="150" />
+        <di:waypoint x="300" y="150" />
+        <di:waypoint x="320" y="150" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1a7lv00" dmnElementRef="disease_category">
+        <dc:Bounds height="45" width="125" x="127" y="277" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0gi00j7" dmnElementRef="weekday">
+        <dc:Bounds height="45" width="125" x="127" y="437" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_08exdip" dmnElementRef="InformationRequirement_135sk1w">
+        <di:waypoint x="252" y="460" />
+        <di:waypoint x="300" y="460" />
+        <di:waypoint x="320" y="460" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0r089bg" dmnElementRef="daytime">
+        <dc:Bounds height="45" width="125" x="117" y="567" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0080tem" dmnElementRef="InformationRequirement_11rqmyi">
+        <di:waypoint x="242" y="590" />
+        <di:waypoint x="290" y="590" />
+        <di:waypoint x="310" y="590" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_02agnfd" dmnElementRef="gender">
+        <dc:Bounds height="45" width="125" x="127" y="697" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1l88ql3" dmnElementRef="waiting_time">
+        <dc:Bounds height="45" width="125" x="127" y="827" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_09d7ez1" dmnElementRef="InformationRequirement_0v4l577">
+        <di:waypoint x="410" y="190" />
+        <di:waypoint x="712" y="400" />
+        <di:waypoint x="712" y="420" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1ohw171" dmnElementRef="Decision_TherapySetting">
+        <dc:Bounds height="80" width="180" x="320" y="110" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0oypn9u" dmnElementRef="InformationRequirement_1xhvoxg">
+        <di:waypoint x="410" y="340" />
+        <di:waypoint x="772" y="400" />
+        <di:waypoint x="772" y="420" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0vl9zwt" dmnElementRef="InformationRequirement_0w8ipof">
+        <di:waypoint x="252" y="300" />
+        <di:waypoint x="300" y="300" />
+        <di:waypoint x="320" y="300" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1z02ljc" dmnElementRef="Decision_DiseaseCategory">
+        <dc:Bounds height="80" width="180" x="320" y="260" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1jxgzdv" dmnElementRef="InformationRequirement_0knlt3k">
+        <di:waypoint x="500" y="460" />
+        <di:waypoint x="632" y="460" />
+        <di:waypoint x="652" y="460" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0555y1j" dmnElementRef="Decision_Weekday">
+        <dc:Bounds height="80" width="180" x="320" y="420" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_16axw3d" dmnElementRef="InformationRequirement_0osmmfg">
+        <di:waypoint x="400" y="550" />
+        <di:waypoint x="697" y="520" />
+        <di:waypoint x="697" y="500" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_05kc9e1" dmnElementRef="Decision_Daytime">
+        <dc:Bounds height="80" width="180" x="310" y="550" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1hpylz7" dmnElementRef="InformationRequirement_1ijx6o9">
+        <di:waypoint x="400" y="680" />
+        <di:waypoint x="742" y="520" />
+        <di:waypoint x="742" y="500" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_16excrh" dmnElementRef="InformationRequirement_1mgygnu">
+        <di:waypoint x="252" y="720" />
+        <di:waypoint x="290" y="720" />
+        <di:waypoint x="310" y="720" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0iiw9sv" dmnElementRef="Decision_Gender">
+        <dc:Bounds height="80" width="180" x="310" y="680" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0mibm43" dmnElementRef="InformationRequirement_0xtou9z">
+        <di:waypoint x="400" y="810" />
+        <di:waypoint x="787" y="520" />
+        <di:waypoint x="787" y="500" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_05bivvr" dmnElementRef="InformationRequirement_0cpzfb1">
+        <di:waypoint x="252" y="850" />
+        <di:waypoint x="290" y="850" />
+        <di:waypoint x="310" y="850" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0it9siv" dmnElementRef="Decision_WaitingTime">
+        <dc:Bounds height="80" width="180" x="310" y="810" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
