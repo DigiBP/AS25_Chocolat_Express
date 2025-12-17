@@ -13,7 +13,7 @@ The Therapist Matcher API simulates a therapy appointment booking system that:
 ## Features
 
 - **Therapist Suggestion Management**: Send lists of available therapists to patients
-- **Automated Selection**: Randomly select a therapist from a provided list with datetime calculation
+- **Automated Selection**: Randomly select a therapist from the provided list with datetime calculation
 - **Email Simulation**: Mock email system for appointment notifications
 - **Weighted Response System**: Simulates therapist availability responses (70% acceptance rate)
 - **Flexible Scheduling**: Supports morning/afternoon slots across all weekdays
@@ -268,8 +268,6 @@ The following variables are set globally and updated through API calls:
 - [ ] Therapist availability calendar
 - [ ] Patient history tracking
 - [ ] Real-time notifications (WebSocket)
-
-For questions or support, please contact [your contact information].
 
 ---
 
