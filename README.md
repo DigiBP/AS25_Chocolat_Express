@@ -108,12 +108,12 @@ Our initial step was to define **relevant matching dimensions** (medical, logist
 
 ### Summarized AS-IS Process
 
-| Step | Description               | Comments                                    | Lane    |
-| ---- | ------------------------- | ------------------------------------------- | ------- |
-| 1    | Start: Request            | Patient initiates search for therapy        | Patient |
-| 2    | Form Filling / Phone Call | Information provided manually               | Patient |
-| 3    | Manual Matching           | Staff checks therapist fit and availability | Admin   |
-| 4    | Feedback Loop             | Calls/emails until a therapist responds     | All     |
+| Step | Description                                 | Comments                                    | Lane    |
+| ---- | ------------------------------------------- | ------------------------------------------- | ------- |
+| 1    | Start: Request                              | Patient initiates search for therapy        | Patient |
+| 2    | Form Filling / Phone Call/plenty of E-mails | Information provided manually               | Patient |
+| 3    | Manual Matching                             | Staff checks therapist fit and availability | Admin   |
+| 4    | Feedback Loop                               | Calls/emails until a therapist responds     | All     |
 
 ---
 
