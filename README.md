@@ -31,7 +31,7 @@ This project digitalizes and simplifies the process for patients seeking a fitti
 | Name            | Email                                                                       |
 | --------------- | --------------------------------------------------------------------------- |
 | Jana Stojanovic | [jana.stojanovic@students.fhnw.ch](mailto:jana.stojanovic@students.fhnw.ch) |
-| Christine Remy  | [christine.remy@students.fhnw.ch](mailto:christine.remy@students.fhnw.ch) |
+| Christine Remy  | [christine.remy@students.fhnw.ch](mailto:christine.remy@students.fhnw.ch)   |
 | Daniel Fuhst    | [daniel.fuhst@students.fhnw.ch](mailto:daniel.fuhst@students.fhnw.ch)       |
 
 ### Coaches
@@ -158,11 +158,12 @@ The BPMN model includes:
 
 ---
 
-## 8. Videos of the process
+## 8. Videos and presentation of the process and project
 
 [Match-Recording](videos/match-recording.mp4)
 
 [No-Match-Recording](videos/no-match-recording.mp4)
+
 
 ---
 
